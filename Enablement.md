@@ -130,7 +130,7 @@ pr_commands = [
   
 * Others
   * `/ask` - Free-style Q&A
-  * `help_docs` - Free-style Q&A, answers from the repo's docs folder
+  * `/help_docs` - Free-style Q&A, answers from the repo's docs folder
   * `/analyze` - Identify components for generating tests, docs and improvements
   * `/create-ticket` - Generates issues for PR in Jira, Linear. GitHub or GitLab
   * `/similar_code` - Retrieves similar / duplicate code
@@ -209,7 +209,7 @@ fallback_models = ["gpt-5", "claude-4-sonnet"]
 
     ```toml
     [config]
-    response_language = "it-IT"
+    response_language = "de-DE"
     ```
 
 * Ignoring files
