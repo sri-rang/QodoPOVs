@@ -1,24 +1,8 @@
-# Enablement :: Qodo Proof-of-Value
+# Enablement
 
-## Topics
+## Qodo for PR Reviews
 
-* Why a code-review agent in needed.
-
-* How Qodo fits into your development workflow.
-
-* Qodo's internal architecture.
-
-* Configuring Qodo for your needs.
-
-* Enforcing compliance rules.
-
-* Suggesting best practices.
-
-* Model control.
-
-* Additional context & extra instructions.
-
-## Why a code-review agent in needed
+### Why a code-review agent in needed
 
 * "Too much code"
 
@@ -26,7 +10,7 @@
 
 * "Security and compliance risk"
 
-### "Too much code"
+#### "Too much code"
 
 * Generative Ai started off an "auto complete on steroids"
 
@@ -38,7 +22,7 @@ Everyone is now an engineering-manager with multiple agentic junior devs at thei
 
 Thus, the review bottleneck.
 
-### "Non-precise implementation"
+#### "Non-precise implementation"
 
 * Ai does things fast, but inaccurate
 
@@ -50,7 +34,7 @@ Thus, the review bottleneck.
 
 Hard and soft rules enforcement.
 
-### "Security and compliance risk"
+#### "Security and compliance risk"
 
 * Too much code is created, sometimes inaccurate
 
@@ -60,7 +44,7 @@ Hard and soft rules enforcement.
 
 Hard rules enforcement.
 
-## How Qodo fits into your development workflow
+### How Qodo fits into your development workflow
 
 * Enforced standardized reviews via Git
 
@@ -68,7 +52,7 @@ Hard rules enforcement.
 
 * Automated reviews via CICD, MCPs, Webhooks, APIs etc.
 
-### Enforced standardized reviews via Git
+#### Enforced standardized reviews via Git
 
 * Qodo listens to webhooks from your Git platform
 
@@ -79,7 +63,7 @@ Hard rules enforcement.
   * Rules to enforce
   * Best practices to suggest
 
-### Local reviews on the developer machine
+#### Local reviews on the developer machine
 
 * Developer downloads an Qodo IDE plugin
   * Available for VS Code, Visual Studio, JetBrains IDEs (IntelliJ, PyCharm, WebStorm etc.)
@@ -93,13 +77,13 @@ Hard rules enforcement.
 
 * Developer activates local reviewer in their dev-workflow
 
-### Automated reviews via CICD, MCPs, Webhooks, APIs etc
+#### Automated reviews via CICD, MCPs, Webhooks, APIs etc
 
 * DevOps configures Qodo CLI in their automation suite
 
 * Qodo CLI triggers Audit agents, Documentation agents, Threat Modeling agents etc.
 
-## Qodo's internal architecture
+### Qodo's internal architecture
 
 * Tools
   * <https://docs.qodo.ai/qodo-documentation/qodo-merge/tools/tools-list>
@@ -111,8 +95,8 @@ Hard rules enforcement.
 * Default tools
 
 ```toml
-# [github_app]
-# [gitlab]
+## [github_app]
+## [gitlab]
 [bitbucket_app]
 pr_commands = [
     "/describe",
@@ -135,7 +119,7 @@ pr_commands = [
   * `/create-ticket` - Generates issues for PR in Jira, Linear. GitHub or GitLab
   * `/similar_code` - Retrieves similar / duplicate code
 
-## Configuring Qodo for your needs
+### Configuring Qodo for your needs
 
 * What can be configured.
   * <https://docs.qodo.ai/qodo-documentation/qodo-merge/configuration/what-can-you-configure>
@@ -146,7 +130,7 @@ pr_commands = [
 * Global configuraton
   * <https://docs.qodo.ai/qodo-documentation/qodo-merge/configuration/configuration-file#global-configuration-file>
 
-## Enforcing compliance rules
+### Enforcing compliance rules
 
 * Setting up compliance rules
   * <https://docs.qodo.ai/qodo-documentation/qodo-merge/features/custom-compliance>
@@ -157,13 +141,13 @@ pr_commands = [
 * Global compliance
   * <https://docs.qodo.ai/qodo-documentation/qodo-merge/features/custom-compliance#global-hierarchical-compliance>
 
-## Suggesting best practices
+### Suggesting best practices
 
 * Auto best practices with GitHub
 
 * User defined best practices
 
-### Auto best practices with GitHub
+#### Auto best practices with GitHub
 
 * Scan repo discussions
   * Learn from discussions on historical PRs and generate best practices file
@@ -175,7 +159,7 @@ pr_commands = [
   * Reinforces and regenerates best practices based on user-acceptance
   * <https://docs.qodo.ai/qodo-documentation/qodo-merge/features/best-practices>
 
-### User defined best practices
+#### User defined best practices
 
 * Local best practices
 
@@ -183,7 +167,7 @@ pr_commands = [
 
 * <https://docs.qodo.ai/qodo-documentation/qodo-merge/features/best-practices#auto-best-practices-vs-custom-best-practices>
 
-## Model control
+### Model control
 
 ```toml
 [config]
@@ -191,7 +175,7 @@ model = "gemini-2.5-pro"
 fallback_models = ["gpt-5", "claude-4-sonnet"]
 ```
 
-## Additional context & extra instructions
+### Additional context & extra instructions
 
 * Supported files
   * `agents.md`, `qodo.md`, `claude.md`
@@ -232,3 +216,14 @@ ignore_pr_authors = ["my-special-bot-user"]
 
 allow_only_specific_folders = ['folder1', 'folder2']  # reviews only when specific folders are modified
 ```
+
+## Qodo in the IDE
+
+### Local Review
+
+* Uncommitted
+* vs. Other Branches
+* Committed
+* Custom Workflows
+
+## Qodo in the Terminal
